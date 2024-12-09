@@ -1,0 +1,103 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsl(0, 0%, 95%);
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.stopwatch {
+  margin-top: 10vh; /* Adjust margin for different screen sizes */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid;
+  border-radius: 50px;
+  background-color: white;
+  padding: 3vw; /* Relative padding for responsiveness */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  width: 400px; /* Limit width for larger screens */
+}
+
+.display {
+  font-size: 4rem; /* Adjust font size */
+  font-family: monospace;
+  font-weight: bold;
+  color: hsl(0, 0%, 30%);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.controls button {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 8px 16px;
+  margin: 5px;
+  min-width: 100px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s ease; /* Fixed transition property syntax */
+}
+
+.start-button {
+  background-color: hsl(115, 100%, 40%);
+}
+
+.stop-button {
+  background-color: hsl(10, 90%, 50%);
+}
+
+.reset-button {
+  background-color: hsl(205, 90%, 50%);
+}
+
+.start-button:hover {
+  background-color: hsl(115, 100%, 35%);
+}
+
+.stop-button:hover {
+  background-color: hsl(10, 90%, 45%);
+}
+
+.reset-button:hover {
+  background-color: hsl(205, 90%, 45%);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .stopwatch {
+    padding: 4vw;
+  }
+
+  .display {
+    font-size: 3rem; /* Reduce font size for smaller screens */
+  }
+
+  .controls button {
+    font-size: 1rem;
+    padding: 8px 12px;
+    min-width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stopwatch {
+    padding: 3vw;
+  }
+
+  .display {
+    font-size: 2.5rem;
+  }
+
+  .controls button {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+    min-width: 70px;
+  }
+}
